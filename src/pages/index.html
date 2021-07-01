@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
+    <title>Algo</title>
     <meta name="description" content="Your project description" />
     <!-- Title -->
     <meta property="og:title" content="" />
@@ -16,138 +16,130 @@
       property="og:image"
       content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
     />
-
-    <!-- uncomment the line below to enable PWA  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <!-- uncomment the line below to enable PWA  
+Yeseva One
+Montserrat thin i light
+ -->
     <!-- <link rel="manifest" href="manifest.json" /> -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
   </head>
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+    <main>
+      <div class="contactBar">
+        ♥mailticon alicja@algo.co.pl  ♥phoneticon +48 503 012 905 ♠fb ♠insta
+      </div>
+      <section class="nav">
+        <div class="nav__image"><img src="../assets/img/logo.png"></div>
+        <div class="nav__items">
+          <p>HOME</p>
+          <p>ALGO</p>
+          <p>O MNIE</p>
+          <p>WSPÓŁPRACA</p>
+          <p>OFERTA</p>
+          <p>OPINIE KLIENTÓW</p>
+          <p>MATERIAŁY</p>
+          <p>KONTAKT</p>
+        </div>
+      </section>
+      <section class="hero">
+        <div class="hero__image"><img src="../assets/img/herophoto.png"></div>
+      </section>
+      <section class="home">
+          <h2>Misja</h2>
+          <p>
+            Algo w języku hiszpańskim oznacza COŚ. Moje Algo oznacza to, że każdy chce osiągnąć COŚ innego kontaktując się ze mną. Ile ludzi, tyle potrzeb i różnych celów. Chcę pomóc Tobie w realizacji Twojego Algo obojętnie czy jest to nauczenie się języka, przetłumaczenie tekstu, czy przygotowanie do wystąpienia. Niezależnie od języka, w którym pomocy potrzebujesz, wesprę Cię w Twoim Algo.
+            Wizja
+          </p>
+          <p>
+            Mogłabym użyć wielu różnych słów, aby określić to, czym się zajmuję – lektorka, tłumaczka, trenerka języków obcych, a może bardziej modnie coach? Postanowiłam jednak, że nazwę się language guide. Guide – czyli przewodnik, bo moje działanie kierunkuję na pomoc Tobie w realizacji Twojego językowego celu. Wspieram w procesie nauczania, wskazuję drogę i możliwości samodzielnej oraz wspólnej nauki, a w przypadku tłumaczeń, pomagam zrozumieć niezrozumiane. Pragnę być Twoim przewodnikiem po językach obcych, ale to Ty podejmujesz decyzje: w jaką podróż wyruszamy, w jakim tempie i jak się przemieszczamy. Innymi słowy, to Ty decydujesz o swoim Algo, a ja będę Cię wspierać w procesie jego realizacji. 
+          </p>
+       </section>
+       <section class="about">                
+        <h2>Kim jestem? Alicja Language Guide</h2>
+        <h3>acząć od czegoś innego</h3>
+        Jako dziecko pragnęłam zostać nauczycielką, panią prezes i pilotką wycieczek. Uczyłam pluszaki, pieczętowałam lalkom czeki i oprowadzałam je po najpiękniejszych miejscach w okolicy. Dorośli mówili mi, że nie da się pogodzić tych trzech zawodów. Teraz śmiało mogę powiedzieć, że albo nadal jestem dzieckiem, albo nie mieli racji, bo pełnię wszystkie te funkcje na raz i spełniam marzenie z dzieciństwa. Tak właśnie powstało Algo.
+        <h2>Doświadczenie</h2>
+        <ul>
+          <li>Od kilku lat aktywną lektorką i trenerką języków obcych (angielskiego i hiszpańskiego) z doświadczeniem w nauczaniu różnych grup wiekowych na wszystkich poziomach zaawansowania</li>
+          <li>Tłumaczką w parze językowej polski-angielski</li>
+          <li>Magistrem kierunku Filologia, Etnolingwistyka o specjalności: język angielski i język hiszpański na UAM</li>
+          <li>Absolwentką Zarządzania i Komunikacji w Biznesie na Uniwersytecie Ekonomicznym w Poznaniu</li>
+          <li>Absolwentką studiów podyplomowych w zakresie tłumaczenia specjalistycznego na Uniwersytecie Adama Mickiewicza</li>
+          <li>Posiadaczką certyfikatu C2 Proficiency potwierdzającego biegłość i kompetencje językowe, a także metodycznych certyfikatów TKT Cambridge (moduły 1,2,3)</li>
+          <li>Pasjonatką brytyjskiej odmiany języka angielskiego i kultury hiszpańskiej</li>
+          <li>Obie prace dyplomowe poświęciłam językowi angielskiemu w środowisku biznesowym, a moim szczególnym zainteresowaniem jest język reklamy i tłumaczenia tekstów marketingowych</li>
+          <li>Zdobyłam doświadczenie międzynarodowe podczas pracy w szkole językowej Edward’s w Londynie</li>
+          <li>Współpracowałam z różnymi branżami m. im. motoryzacyjną, modową, meblarską, kulturową</li>
+          <li>obecnie współpracuję z największą szkołą językową w Polsce, a także z kilkoma polskimi jak i zagranicznymi firmami prowadząc kursy in-company dostosowane do potrzeb klientów korporacyjnych oraz języka ogólnego </li>
+          <li>prowadzę kursy indywidualne i grupowe</li>
+          <li>uczę się języka francuskiego i czeskiego - nauczyciel też uczeń😉</li>
+        </ul>
+       </section>
+       <section class="coop"> 
+         <h1>Oferta</h1>
+         <p>Zobacz jakie oferuję możliwości współpracy</p>
+         <ul>
+           <li>•	Prowadzę kursy – językowe podróże z angielskiego indywidualne i grupowe dla dorosłych oraz warsztaty tematyczne</li>
+           <li>•	Uczę stacjonarnie (dojadę do Twojej firmy na warsztaty lub kurs)</li>
+           <li>•	Uczę online</li>
+           <li>•	Współpracuję z firmami prowadząc warsztaty i szkolenia z komunikacji biznesowej i treningi językowe w językach angielskim i polskim</li>
+           <li>•	Przygotowuję do rozmów kwalifikacyjnych w językach angielskim i polskim</li>
+           <li>•	Sprawdzam poziom języka u pracowników w firmach</li>
+           <li>•	Prowadzę kursy języka hiszpańskiego od podstaw – w kontekście biznesowym, ogólnym lub podróżniczym</li>
+           <li>•	Wykonuję tłumaczenia w parze językowej angielski-polski (tematyka ogólna, biznes, marketing) oraz z języka hiszpańskiego na polski.</li>
+           <li>•	Współpracuję ze specjalistami z różnych języków w zakresie nauczania i tłumaczeń</li>
+           <li>•	Współpracuję z lektorami zajmującymi się nauczaniem dzieci</li>
+         </ul>
+       </section>
+       <section class="jurney">
+        <p>Kursy i oferta tłumaczeniowa– językowe podróże</p>
+        <p>Jako Language Guide mogę zaoferować Ci następujące językowe podróże</p>
+        <article class="jurney__guide">
+          <h3>Business class </h3>
+          <p>Masz pomysł na współpracę z Tobą lub Twoją firmą? Napisz do mnie! Mogę poprowadzić kurs firmowy, warsztaty tematyczne lub językowy dzień integracyjny. Jestem otwarta na propozycje</p>
+          <h3>Short getaway</h3>
+          <p>Chcesz się spotkać na lekcji indywidualnej, rozgadać się, przygotować do rozmowy kwalifikacyjnej, a może sprawdzić swój poziom lub rozprawić z trudnym zagadnieniem? Zapisz się na 60-min zajęcia. Cena konsultacji to 120 zł. Istnieje możliwość wykupienia pakietu zajęć po takiej lekcji.</p>
+          <h3>Long-distance trip</h3>
+          <p>Pakiety zajęć to spersonalizowane oferty większej liczby zajęć, dlatego jeśli chcesz poznać propozycję dla Ciebie, wypełnij formularz kontaktowy.</p>
+          <h3>Package holiday</h3>
+          <p>Jeśli należysz do tych, którzy uważają, że w grupie podróżuje się najlepiej – ta oferta jest dla Ciebie. Napisz do mnie, aby uzyskać informacje na temat aktualnych kursów grupowych. </p>
+          <h3>Translingual voyage</h3>
+          <p>Potrzebujesz tłumaczenia z angielskiego, polskiego lub hiszpańskiego, lub na któryś z tych języków? Świetnie trafił_ś. Zlecenia wyceniam indywidualnie, dlatego proszę napisz do mnie wiadomość.</p>
+          <h3>Exotic journey</h3>
+          <p>Jeśli szukasz lektora lub tłumacza innego języka lub nauczyciela dla dziecka, również w formie korepetycji, śmiało możesz się ze mną skontaktować, żebym dobrała odpowiedniego lektora/kę</p>
+          <h3>Tandem</h3>
+          <p>Pragniesz ćwiczyć swoje kompetencje językowe w towarzystwie, ale nie masz z kim? Spróbujemy coś na to poradzić i znaleźć osobę, która tak jak Ty chce ćwiczyć swoje umiejętności językowe.</p>
+          <h3>Off the beaten track</h3>
+          <p>Jest to wyjątkowa oferta dla osób niesłyszących – zajęcia za pośrednictwem czatu, które skupiają się na pisanej komunikacji w języku angielskim oraz czytaniu. Na szczegółowe pytania odpowiem mailowo.</p>
+        </article>
+       </section>
+       <section class="opinion">
+         <h3>Agnieszka Kozłowska – metodyk WSB</h3>
+         <p>Zajęcia prowadzone przez Alicję to majstersztyk. Ledwo pozbierałam się z zadziwienia już na pierwszych, gdy okazało się, że mamy przygotowany plan na cały rok, dodatkowo podpisujemy kontrakt i uzgadniamy cele. Marzenie metodyka!  Każda kolejna lekcja pokazywała, jak perfekcyjnie Alicja jest przygotowana. W zasadzie nic nie mogło jej zaskoczyć: czy była nas cała grupa, czy jedno lub dwoje, zawsze był plan na lekcję. I to taki, że ćwiczenie goniło ćwiczenie i nawet człowiek nawet nie orientował się, że minęła godzina.
+          Zajęcia miały kapitalną strukturę, były jak tort przekładany raz nutellą, raz konfiturą z malin. Na początek był zawsze small tak, na koniec zawsze lista słówek. I znów słowo od metodyka: Alicja zarządzała powtórkami w taki sposób, że nie było możliwości, żeby się nie nauczyć. Tworzyła na zajęciach przesympatyczną atmosferę i jednocześnie goniła do roboty. 
+          Alicja w mistrzowski sposób opanowała prowadzenie zajęć online. Traktuje narzędzia online jak narzędzia pracy, a nie jak "urozmaicenie" zajęć. 
+          To prawdziwa profesjonalistka z ogromną pasją. Czasem myślę, czy aby na pewno jest prawdziwa...
+          </p>
+       </section>
+       <section class="download">
+         <h1>Do pobrania (tenses, mistakes, money article, presentation conditionals)</h1>
+         <p>Tutaj znajdziesz materiały do nauki. Możesz je pobrać i korzystać z nich na własny użytek. Pamiętaj, żeby szanować prawo autorskie i nie powielać treści ani nie rozpowszechniać jej bez mojej zgody.</p>
+       </section>
+       <section class=contact>
+         <h1>Kontakt</h1>
+         <p>alicja@algo.co.pl</p>
+         <p>+48 503 012 905</p>
+         <p>e-mail, treść</p>
+         <p>Social media fb, insta, Spotify?</p>
+         <p>Odwiedź mnie na Instagramie, gdzie każdego tygodnia publikuję językowe treści.</p>
+       </section>
+       <section class="footer">
+        Copyright &#169; Algo Alicja Szczepańska Privacy Policy
+        
+       </section>
+
+    </main>
   </body>
 </html>
