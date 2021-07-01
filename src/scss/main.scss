@@ -3,9 +3,13 @@
 @import "_variables";
 @import "modules/hello.scss";
 @import "modules/contactbar.scss";
+@import "modules/nav.scss";
+@import "modules/hero.scss";
 
 body {
-  background: #fff;
+  background: white;
   font-family: 'Montserrat', sans-serif;
   //font-family: 'Yeseva One', cursive;
+  color: black;
+  margin: auto;
 }
