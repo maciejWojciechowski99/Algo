@@ -2,12 +2,10 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import "modules/contactbar.scss";
 
 body {
   background: #fff;
-  //font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   //font-family: 'Yeseva One', cursive;
-}
-.contactBar{
-  color: #000;
 }
