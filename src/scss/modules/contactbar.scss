@@ -1,5 +1,38 @@
 
 .contactBar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    color: white;
+    background-color: #292929;
+    font-size: 14px;
+
+    &__mailandphone{
+        margin-left: 5%;
+    }
+
+    &__socials{
+    }
+
+    &__text{
+    position: relative;
+    bottom: 10px;
+    }
+
+    &__mailandPhoneIcon{
+        width: 30px;
+        margin: auto 10px;
+    }
+
+    &__socialsIcon{
+        height: 30px;
+        float: right;
+        margin-right: 25px;
+    }
+  }
+
+/*
+.contactBar{
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -32,3 +65,4 @@
     position: relative;
     bottom: 10px;
 }
+*/

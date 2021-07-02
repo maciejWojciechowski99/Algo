@@ -1,0 +1,27 @@
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    &__mission{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+    &__vision{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+}
+
+.misja__photo{
+    width: 300px;
+    height: 400px;
+    padding: 0px 32px 32px 16px;
+}
+.vision__photo{
+    width: 300px;
+    height: 400px;
+    padding: 0px 32px 32px 16px;
+}
