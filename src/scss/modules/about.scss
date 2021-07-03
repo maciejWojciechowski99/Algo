@@ -1,0 +1,61 @@
+.about{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    &__whoIm{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: auto;
+
+    }
+    &__subWhoIm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        font-size: 28px;
+        line-height: 40px;
+        padding: 16px;
+        margin-left: 20px;
+
+    }
+
+    &__whoIm--photo{
+        width: 70%;
+        height: 85%;
+        margin-left: 70px;
+        margin-top: 5%;
+        border-radius: 15%;
+        border: 16px solid #F6F9FD;
+        box-shadow: 0px 8px 8px #7643579c;
+    }
+    &__exp{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    &__subExp{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        text-align: left;
+        width: 80%;
+        line-height: 32px;
+        font-size: 18px;
+        margin-left: 20%;
+    }
+    &__exp--photo{
+        width: 60%;
+        height: 75%;
+        margin-top:10%;
+        margin-left: 20%;
+        border-radius: 15%;
+        border: 16px solid #F6F9FD;
+        box-shadow: 0px 8px 8px #7643579c;
+    }
+}
