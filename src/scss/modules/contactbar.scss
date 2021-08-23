@@ -1,68 +1,85 @@
-
 .contactBar{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
     padding: 5px;
     color: white;
-    background-color: #292929;
+    background-color: $mainColour;
     font-size: 14px;
-
+    @media(max-width:$tablet){
+        display: none;
+    }
     &__mailandphone{
-        margin-left: 5%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &--mailto{
+            text-decoration: none;
+            outline: none;
+            color: white;
+        }
+        &--mailIcon{
+            width: 30px;
+            margin: auto 10px;
+        }
+        &--phoneIcon{
+            width: 30px;
+            margin: auto 10px;
+        }
     }
 
     &__socials{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 200px;
+        &--bristish{
+            height:20px;
+            transition: transform 0.1s linear;
+            transform-origin: center;
+            &:hover{
+            cursor:pointer;
+            transform: scale(1.55);
+            }
     }
+    &--fb{
+        height: 30px;
+        margin-left: 40px;
+        transition: transform 0.1s linear;
+        transform-origin: center;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+    &--instagram{
+        height: 30px;
+        transition: transform 0.1s linear;
+        transform-origin: center;
+        &:hover{
+        cursor:pointer;
+        transform: scale(1.15);
+        }
+    }
+    &--linkedin{
+        height: 30px;
+        transition: transform 0.1s linear;
+        transform-origin: center;
+        &:hover{
+        cursor:pointer;
+        transform: scale(1.15);
+        }
+
+    }}
 
     &__text{
-    position: relative;
-    bottom: 10px;
     }
 
     &__mailandPhoneIcon{
         width: 30px;
         margin: auto 10px;
     }
-
-    &__socialsIcon{
-        height: 30px;
-        float: right;
-        margin-right: 25px;
-    }
   }
-
-/*
-.contactBar{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    padding: 5px;
-    color: white;
-    background-color: #292929;
-    text-align: center;
-    font-size: 14px;
-    
-    &__mailandphone{
-        margin-left: 5%;
-    }
-    &__socials{
-        margin-left: 50%;
-    }
-  }
-.mailandphone--icon{
-    width: 30px;
-    margin: auto 10px;
-}
-.socials--iconfb{
-    width: 30px;
-  }
-.socials--iconinsta{
-    width: 30px;
-    margin-left: 20px;
-}
-.contactBar__text{
-    position: relative;
-    bottom: 10px;
-}
-*/
+  

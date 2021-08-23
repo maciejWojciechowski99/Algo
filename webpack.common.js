@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
@@ -87,6 +88,84 @@ module.exports = {
       inject: true,
       chunks: ["index", "another"],
       filename: "another.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/download.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "download.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/about.html",
+      inject: true,
+      chunks: ["index", "another", "download"],
+      filename: "about.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/contact.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jurney.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "jurney.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/offer.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "offer.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/opinions.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "opinions.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/start.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "start.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/about_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "about_en.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/contact_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "contact_en.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jurney_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "jurney_en.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/offer_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "offer_en.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/opinions_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "opinions_en.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/download_en.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "download_en.html",
     }),
   ],
 };

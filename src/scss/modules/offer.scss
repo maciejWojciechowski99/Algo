@@ -1,44 +1,156 @@
 .offer{
-    display: grid;
-    grid-template-rows: 1fr 3fr;
+    display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
-    &__header{
-        margin-top: 5%;
+    &__headers{
+        margin-top: 10px;
+        font-size: 22px;
+        border-bottom: solid 3px $mainColour;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-self: center;
         align-items: center;
+        color:$mainColour;
+        @media(max-width:$tablet){
+            margin:20px;
+        }
+        &--header{
+            color:$mainColour;
+            font-size: 48px;
+        }
+        &--headerTwo{
+            color:$mainColour;
+            font-size: 28px;
+            font-weight: 300;
+            text-align: center;
+            @media(max-width:$tablet){
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
     &__content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        margin:20px 130px 100px 70px;
+        @media(max-width:$laptopL){
+            margin-top: 20px;
+        }
+        @media(max-width:1150px){
+            margin-top: 0px;
+        }
+        @media(max-width:$tablet){
+            flex-wrap: wrap;
+        }
+        &--listOne{
+            max-width: 400px;
+            margin-top: 100px;
+            font-size: 20px;
+            line-height: 32px;
+            list-style: none;
+            @media(max-width:$laptopL){
+                margin: 100px 0px 100px 0px;
+                max-width: 270px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            @media(max-width:1150px){
+                max-width: 200px;
+                font-size: 15px;
+                line-height: 22px;
+                padding-left: 0px;
+            }
+            @media(max-width:$tablet){
+                font-size: 16px;
+                line-height: 32px;
+                max-width: 400px;
+                margin: 20px;
+            }
+            &--item{
+                border-bottom: 2px solid $mainColour;
+                margin-bottom: 56px;
+                @media(max-width:$laptopL){
+                    margin-bottom: 31px;
+                }
+                @media(max-width:1150px){
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        &--photo{
+            max-width: 600px;
+            max-height: 800px;
+            margin-left: 50px;
+            margin-right: 20px;
+            margin-top: 20px;
+            border-radius: 2%;
+            box-shadow: 4px 4px 8px $mainColour;
+            @media(max-width:$laptopL){
+                max-width: 400px;
+                max-height: 600px;
+                margin-top: 120px;
+            }
+            @media(max-width:1150px){
+                max-width: 360px;
+                max-height: 560px;
+                margin-left: 10px;
+                margin-right: 0px;
+                margin-top: 110px;
+            }
+            @media(max-width:$tablet){
+                max-width: 600px;
+                max-height: 800px;
+                margin-bottom: 0px;
+                margin: 20px;
+            }
+            @media(max-width:570px){
+                max-width: 300px;
+                max-height: 500px;
+            }
+            //border: 13px solid #F6F9FD;
+            //box-shadow: 6px 10px 10px $mainColour;
+        }
+        &--listTwo{
+            max-width: 400px;
+            margin-top: 100px;
+            margin-left: 40px;
+            font-size: 20px;
+            line-height: 32px;
+            padding-left: 0px;
+            list-style: none;
+            @media(max-width:$laptopL){
+                margin: 100px 0px 100px 0px;
+                max-width: 270px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            @media(max-width:1150px){
+                max-width: 200px;
+                font-size: 15px;
+                line-height: 22px;
+                margin-left: 20px;
+            }
+            @media(max-width:$tablet){
+                font-size: 16px;
+                line-height: 32px;
+                max-width: 400px;
+                margin: 20px;
+            }
+            &--item{
+                border-bottom: 2px solid $mainColour;
+                margin-bottom: 35px;
+                @media(max-width:$laptopL){
+                    margin-bottom: 20px;
+                }
+                @media(max-width:1150px){
+                    margin-bottom: 25px;
+                }
+            }
+        }
     }
-    &__listOne{
-        margin-top: 15%;
-        font-size: 22px;
-        line-height: 40px;
-
-    }
-    &__photo{
-        width: 82%;
-        height: 95%;
-        margin-left: 5%;
-        border-radius: 15%;
-        border: 16px solid #F6F9FD;
-        box-shadow: 0px 8px 8px #7643579c;
-    }
-    &__listTwo{
-        margin-top: 15%;
-        font-size: 22px;
-        line-height: 40px;
-
-    }
-    &__list--item{
-        margin-bottom: 25px;
-
-    }
-
 }

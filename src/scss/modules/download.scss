@@ -1,0 +1,80 @@
+.download{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &__about{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        margin-top: 50px;
+        &--header{
+            color: $mainColour;
+            font-size: 44px;
+            font-family: 'Yeseva One', cursive;
+            font-weight: 300;
+        }
+        &--subHeader{
+            text-align: center;
+            font-size: 24px;
+            font-size: 24px;
+            font-weight: 300;
+            padding-bottom: 35px;
+            border-bottom: 3px solid $mainColour;
+            @media(max-width:$tablet){
+                max-width: 350px;
+            }
+            @media(max-width:370px){
+                max-width: 300px;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        padding: 50px;
+        margin-bottom: 190px;
+        @media(max-width:$tablet){
+            flex-direction: column;
+        }
+        &--item{
+            margin-bottom: 35px;
+            margin-left: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: $mainColour;
+            color: white;
+            padding: 25px;
+            text-decoration: none;
+            transition: transform 0.1s linear;
+            transform-origin: center;
+            &:hover{
+                transform: scale(1.20);
+                background-color: rgb(63, 0, 0);
+            }
+            &--paragraph{
+                font-family: 'Montserrat', cursive;
+                text-align: center;
+                margin-bottom: 50px;
+                font-size: 16px;
+            }
+            &--icon{
+                height: 50px;
+                width: 50px;
+                margin-bottom: 20px;
+                
+            }
+        }
+    }
+}

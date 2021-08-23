@@ -1,7 +1,6 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
 @import "modules/contactbar.scss";
 @import "modules/nav.scss";
 @import "modules/hero.scss";
@@ -9,18 +8,34 @@
 @import "modules/about.scss";
 @import "modules/offer.scss";
 @import "modules/jurney.scss";
+@import "modules/opinions.scss";
+@import "modules/download.scss";
+@import "modules/contact.scss";
+@import "modules/footer.scss";
+
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   background: white;
   font-family: 'Montserrat', sans-serif;
   //font-family: 'Yeseva One', cursive;
   color: black;
-  margin-left: auto;
-  margin-right: auto;
   width: auto;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+h1{
+  font-family: 'Yeseva One', cursive;
+  font-weight: 300;
+}
+
+h2, h3{
+  font-family: 'Montserrat', cursive;
+
+}
+
+.bordo{
+  color: $mainColour;
 }
