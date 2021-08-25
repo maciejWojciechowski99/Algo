@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine on
+RewriteRule algo-wizja index.html
+RewriteRule algo-vision start.html
+RewriteRule o-mnie about.html
+RewriteRule about-me about_en.html
+RewriteRule zobacz-czym-sie-zajmuje offer.html
+RewriteRule check-my-offer offer_en.html
+RewriteRule poznaj-moje-kursy jurney.html
+RewriteRule check-my-courses jurney_en.html
+RewriteRule opinie-moich-uczniow opinions.html
+RewriteRule opinions-about-my-lessons opinions_en.html
+RewriteRule pliki-do-pobrania download.html
+RewriteRule to-download-content download_en.html
+RewriteRule skontaktuj-się-ze-mną contact.html
+RewriteRule contact-with-me contact_en.html
