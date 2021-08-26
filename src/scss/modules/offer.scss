@@ -3,6 +3,11 @@
     flex-direction: column;
     width: auto;
     height: auto;
+    @media(max-width:$tablet){
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
     &__headers{
         margin-top: 10px;
         font-size: 22px;
@@ -15,7 +20,7 @@
         align-items: center;
         color:$mainColour;
         @media(max-width:$tablet){
-            margin:20px;
+            margin:0px;
         }
         &--header{
             color:$mainColour;
@@ -30,6 +35,23 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            @media(max-width:715px){
+                max-width: 500px;
+            }
+            @media(max-width:560px){
+                max-width: 400px;
+            }
+            @media(max-width:460px){
+                max-width: 350px;
+            }
+            @media(max-width:380px){
+                max-width: 320px;
+            }
+            @media(max-width:345px){
+                max-width: 300px;
+                font-size: 24px;
+
+            }
         }
     }
     &__content{
@@ -41,11 +63,12 @@
         @media(max-width:$laptopL){
             margin-top: 20px;
         }
-        @media(max-width:1150px){
+        @media(max-width:1200px){
             margin-top: 0px;
         }
-        @media(max-width:$tablet){
-            flex-wrap: wrap;
+        @media(max-width:990px){
+            margin:20px;
+            flex-direction: column;
         }
         &--listOne{
             max-width: 400px;
@@ -54,22 +77,41 @@
             line-height: 32px;
             list-style: none;
             @media(max-width:$laptopL){
-                margin: 100px 0px 100px 0px;
+                margin: 100px 20px 100px 20px;
                 max-width: 270px;
                 font-size: 18px;
                 line-height: 28px;
             }
-            @media(max-width:1150px){
+            @media(max-width:1200px){
                 max-width: 200px;
                 font-size: 15px;
                 line-height: 22px;
                 padding-left: 0px;
             }
-            @media(max-width:$tablet){
-                font-size: 16px;
+            @media(max-width:990px){
+                max-width: 500px;
                 line-height: 32px;
+                margin: 50px 50px 50px 50px;
+            }
+            @media(max-width:$tablet){
                 max-width: 400px;
-                margin: 20px;
+                margin: 50px auto 50px auto;
+            }
+            @media(max-width:715px){
+                max-width: 350px;
+            }
+            @media(max-width:560px){
+                max-width: 320px;
+            }
+            @media(max-width:460px){
+                max-width: 310px;
+                line-height: 24px;
+            }
+            @media(max-width:380px){
+                max-width: 290px;
+            }
+            @media(max-width:345px){
+                max-width: 270px;
             }
             &--item{
                 border-bottom: 2px solid $mainColour;
@@ -95,12 +137,16 @@
                 max-height: 600px;
                 margin-top: 120px;
             }
-            @media(max-width:1150px){
+            @media(max-width:1200px){
                 max-width: 360px;
                 max-height: 560px;
-                margin-left: 10px;
-                margin-right: 0px;
-                margin-top: 110px;
+                margin: 100px 20px 20px 20px;
+            }
+            @media(max-width:990px){
+                max-width: 500px;
+                max-height: 700px;
+                line-height: 32px;
+                margin: 10px 50px 50px 50px;
             }
             @media(max-width:$tablet){
                 max-width: 600px;
@@ -124,22 +170,41 @@
             padding-left: 0px;
             list-style: none;
             @media(max-width:$laptopL){
-                margin: 100px 0px 100px 0px;
+                margin: 100px 20px 100px 20px;
                 max-width: 270px;
                 font-size: 18px;
                 line-height: 28px;
             }
-            @media(max-width:1150px){
+            @media(max-width:1200px){
                 max-width: 200px;
                 font-size: 15px;
                 line-height: 22px;
-                margin-left: 20px;
+                padding-left: 0px;
+            }
+            @media(max-width:990px){
+                max-width: 500px;
+                line-height: 32px;
+                margin: 50px 50px 50px 50px;
             }
             @media(max-width:$tablet){
-                font-size: 16px;
-                line-height: 32px;
                 max-width: 400px;
-                margin: 20px;
+                margin: 50px auto 50px auto;
+            }
+            @media(max-width:715px){
+                max-width: 350px;
+            }
+            @media(max-width:560px){
+                max-width: 320px;
+            }
+            @media(max-width:460px){
+                max-width: 310px;
+                line-height: 24px;
+            }
+            @media(max-width:380px){
+                max-width: 290px;
+            }
+            @media(max-width:345px){
+                max-width: 270px;
             }
             &--item{
                 border-bottom: 2px solid $mainColour;
@@ -147,8 +212,11 @@
                 @media(max-width:$laptopL){
                     margin-bottom: 20px;
                 }
-                @media(max-width:1150px){
-                    margin-bottom: 25px;
+                @media(max-width:1200px){
+                    margin-bottom: 50px;
+                }
+                @media(max-width:1100px){
+                    margin-bottom: 30px;
                 }
             }
         }
