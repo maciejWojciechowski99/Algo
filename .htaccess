@@ -1,9 +1,20 @@
 RewriteEngine On
 RewriteBase /
 
+# Aktywowanie protokułu SSL
+
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# Przekierowanie na SSL
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://algo.co.pl
+
+# Przyjazne linki w przeglądarce
 
 RewriteEngine on
 RewriteRule algo-wizja index.html
@@ -20,3 +31,76 @@ RewriteRule materialy-do-nauki download.html
 RewriteRule content-to-download download_en.html
 RewriteRule skontaktuj-się-ze-mną contact.html
 RewriteRule contact-me contact_en.html
+
+# Moduł z bezWWW
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.algo.co.pl [NC]
+RewriteRule ^(.*)$ http://algo.co.pl/$1 [L,R=301]
+
+# Blokada wykonywania skryptów PHP
+
+<Files *.php>
+deny from all
+</Files>
+
+# BEGIN blokowanie skanowania
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY_STRING} (author=\d+) [NC]
+RewriteRule .* - [F]
+
+# END blokowanie skanowania
+
+# Wyłączenie hotlinkowana zdjęć z serwera
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?algo.co.pl [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.pl [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ – [NC,F,L]
+
+# Zabezpieczenie pliku .htacces
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+#Przekierowanie index.php i index.html na /
+
+RewriteCond %{THE_REQUEST} ^.*/index\.(php|html)
+RewriteRule ^(.*)index.(php|html)$ /$1 [R=301,L]
+
+<IfModule mod_deflate.c>
+ # Compress HTML, CSS, JavaScript, Text, XML and fonts
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+ AddOutputFilterByType DEFLATE application/x-font
+ AddOutputFilterByType DEFLATE application/x-font-opentype
+ AddOutputFilterByType DEFLATE application/x-font-otf
+ AddOutputFilterByType DEFLATE application/x-font-truetype
+ AddOutputFilterByType DEFLATE application/x-font-ttf
+ AddOutputFilterByType DEFLATE application/x-javascript
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE font/opentype
+ AddOutputFilterByType DEFLATE font/otf
+ AddOutputFilterByType DEFLATE font/ttf
+ AddOutputFilterByType DEFLATE image/svg+xml
+ AddOutputFilterByType DEFLATE image/x-icon
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/xml
+ # Remove browser bugs (only needed for really old browsers)
+ BrowserMatch ^Mozilla/4 gzip-only-text/html
+ BrowserMatch ^Mozilla/4\.0[678] no-gzip
+ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+ Header append Vary User-Agent
+</IfModule>
