@@ -1,18 +1,12 @@
-![cover](https://algo.co.pl/img/herophoto.5567522d.png)
+![cover](https://algo.co.pl/img/logo.1a1951cb.png)
 
-# WTF Webpack Starter Kit 
+# ALGO Alice_Language_Guide
 
-Simple toolkit for your static websites development.
+This is ALGO offcial page created by me. Alice is a Language master. She learn english and spanish.
 
-## How to use it?
+## Check this out!
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Algo.co.pl
 
-## Available scripts
 
-`npm run start` - runs development mode
-
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
 
