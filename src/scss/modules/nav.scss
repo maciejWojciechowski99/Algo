@@ -48,8 +48,11 @@ z-index: 10;
     @media(max-width:$laptop){
         font-size: 16px;
     }
+    @media(max-width:890px){
+        font-size: 15px;
+    }
     @media(max-width:$tablet){
-        flex-direction: column;
+        flex-direction: column;;
     }
 }
 &__item{
@@ -59,16 +62,32 @@ z-index: 10;
     margin-left: 30px;
     transition: transform 0.1s linear;
     transform-origin: center;
+    &:hover{
+        color: rgb(197, 40, 40);
+        cursor: pointer;
+        transform:scale(1.20);
+    @media(max-width:890px){
+        transform:scale(1.05); 
+        }
+    }
     @media(max-width:1250px){
         margin-left: 10px;
     }
     @media(max-width:$laptop){
         margin-left: 10px;
     }
-    &:hover{
-        color: rgb(197, 40, 40);
-        cursor: pointer;
-        transform:scale(1.20);
+    @media(max-width:890px){
+        margin-left: 10px;
+        padding: 5px;
+    }
+    @media(max-width:850px){
+        margin-left: 10px;
+        padding: 0px;
+    }
+    @media(max-width:$tablet){
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 18px;
     }
 }
 }

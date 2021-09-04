@@ -39,3 +39,34 @@ h2, h3{
 .bordo{
   color: $mainColour;
 }
+
+.cookieHover{
+  &:hover{
+    color: rgb(53, 14, 14);
+  }
+}
+
+#simplecookienotification_v01_polityka{
+  @media(max-width:550px){
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40%;
+    margin-right: 50%;
+    margin-top: 2%;
+  }
+}
+#okbutton{
+  @media(max-width:550px){
+    margin-top:30px;
+    padding: 50px;
+    font-size: 18px !important;
+  }
+  @media(max-width:350px){
+    margin-top:30px;
+  }
+}
+
+.policy{
+  text-decoration: none;
+  color: white;
+}
